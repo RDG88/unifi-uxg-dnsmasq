@@ -1,6 +1,8 @@
 # unifi-uxg-dnsmasq
 Script to bring static DNS entires to unifi UXG. 
 
+Tested on UCG Ultra
+
 Basically, you could just add your static entries to `/run/dnsmasq.conf.d/host.dns`. Sadly, that's not persistent so we need to automatically create a softlink. Nothing too complicated so don't worry.
 
 ## 1. Scripts
