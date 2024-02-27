@@ -1,5 +1,5 @@
-# unifi-uxg-dnsmasq
-Script to bring static DNS entires to unifi UXG. 
+# unifi-UCG-dnsmasq
+Script to bring static DNS entires to unifi UCG. 
 
 Tested on UCG Ultra
 
