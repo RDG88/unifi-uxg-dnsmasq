@@ -65,7 +65,11 @@ This is where you put your actual static entries.
 host-record=example.url.net,10.10.1.2
 host-record=example2.blablub.foobar,10.10.2.21
 ```
-
+Forward complete zone to another DNS server
+```cfg
+server=/lab.fqdn.nl/192.168.5.161
+server=/lab.fqdn.nl/192.168.5.161#5353
+```
 
 ### Make them executable
 
