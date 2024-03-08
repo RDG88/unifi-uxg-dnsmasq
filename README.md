@@ -77,6 +77,10 @@ Forward reverse DNS zone to another DNS server
 server=/5.168.192.in-addr.arpa/192.168.5.161
 server=/3.168.192.in-addr.arpa/192.168.5.161
 ```
+Forward all other DNS request to an upstream dns server
+```cfg
+server=192.168.5.161
+```
 Using the same file for configuring PXE Booting
 ```cfg
 # The boot filename, Server name, Server Ip Address
