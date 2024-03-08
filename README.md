@@ -77,6 +77,23 @@ Forward reverse DNS zone to another DNS server
 server=/5.168.192.in-addr.arpa/192.168.5.161
 server=/3.168.192.in-addr.arpa/192.168.5.161
 ```
+Using the same file for configuring PXE Booting
+```cfg
+# The boot filename, Server name, Server Ip Address
+dhcp-boot=netboot.xyz.kpxe,netboot.xyz,192.168.2.42
+
+# inspect the vendor class string and match the text to set the tag
+dhcp-vendorclass=BIOS,PXEClient:Arch:00000
+dhcp-vendorclass=UEFI32,PXEClient:Arch:00006
+dhcp-vendorclass=UEFI,PXEClient:Arch:00007
+dhcp-vendorclass=UEFI64,PXEClient:Arch:00009
+
+# Set the boot file name based on the matching tag from the vendor class (above)
+dhcp-boot=net:UEFI32,netboot.xyz.efi,netboot.xyz,192.168.2.42
+dhcp-boot=net:BIOS,netboot.xyz.kpxe,netboot.xyz,192.168.2.42
+dhcp-boot=net:UEFI64,netboot.xyz.efi,netboot.xyz,192.168.2.42
+dhcp-boot=net:UEFI,netboot.xyz.efi,netboot.xyz,192.168.2.42
+```
 
 ### Make them executable
 
